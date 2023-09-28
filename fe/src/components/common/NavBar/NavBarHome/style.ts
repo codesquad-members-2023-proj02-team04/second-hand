@@ -2,18 +2,20 @@ import styled from 'styled-components';
 
 export const Layout = styled.div`
   align-items: center;
-  justify-content: space-between;
-  padding: 0px 0.8em 0.2em;
-
+  justify-content: center;
+  padding: 0px 0.8em 1.5vh 0.8em;
   border: 1px solid ${({ theme }) => theme.color.palette.gray200};
-  ${({ theme }) => theme.mixin.navBarMixin.commonNavBar({ width: '92.5vw' })};
+  ${({ theme }) =>
+    theme.mixin.navBarMixin.commonNavBar({ height: '6.5vh', width: '92.5vw' })};
 `;
 
 export const AddressBox = styled.button`
   display: flex;
+  align-items: center;
   border: none;
   background: ${({ theme }) => theme.color.colors.neutralBackgroundBlur};
-  align-items: center;
+  ${({ theme }) => theme.font.fontType.body};
+  gap: 0.1em;
 `;
 
 export const CategoryBox = styled.div`
