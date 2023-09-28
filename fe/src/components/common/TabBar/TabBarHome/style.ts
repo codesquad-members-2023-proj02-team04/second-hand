@@ -6,10 +6,10 @@ interface ItemNameProps {
 
 export const Box = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-around;
   position: fixed;
   bottom: 0;
-  padding-top: 0.5vh;
   width: 100vw;
   height: 8vh;
   background: ${({ theme }) => theme.color.palette.gray50};
