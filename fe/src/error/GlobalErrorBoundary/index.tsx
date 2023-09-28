@@ -1,4 +1,5 @@
 import NotFound from '@Components/common/NotFound';
+import Redirect from '@Components/common/Redirect';
 import { LocalError } from '@Error/LocalError';
 import React, { ReactNode } from 'react';
 import { ERROR_MESSAGE } from '@Constants/index';
@@ -28,9 +29,9 @@ export class GlobalErrorBoundary extends React.Component<Props, State> {
   render(): ReactNode {
     const { hasError, error } = this.state;
 
-    if (hasError) {
-      if (error instanceof LocalError) {
-        return <NotFound errorMessage={error.message} />;
+    if (hasError && error instanceof LocalError) {
+      if (error.message === ERROR_MESSAGE.refresh) {
+        return <Redirect errorMessage={error.message} />;
       }
       return <NotFound errorMessage={ERROR_MESSAGE.default} />;
     }

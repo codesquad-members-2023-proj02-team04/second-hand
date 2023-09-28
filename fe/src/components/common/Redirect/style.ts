@@ -24,11 +24,3 @@ export const SubNoticeMessage = styled.div`
   text-align: center;
   ${({ theme }) => theme.font.fontType.subHead}
 `;
-
-export const RedirectButton = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80vw;
-  padding-top: 30px;
-`;
