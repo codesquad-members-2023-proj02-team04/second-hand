@@ -3,12 +3,13 @@ import styled from 'styled-components';
 export const Box = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0.625rem 1.125rem 1.125rem;
+  align-items: center;
   position: fixed;
   bottom: 0;
-  width: 93vw;
-  height: 5vh;
+  width: inherit;
+  height: 8vh;
   background: ${({ theme }) => theme.color.palette.gray50};
+  padding: 0.5vh 1rem 1.125rem 1rem;
 `;
 
 export const Item = styled.div`

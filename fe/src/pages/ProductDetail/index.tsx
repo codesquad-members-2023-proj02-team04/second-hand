@@ -4,6 +4,7 @@ import { ProductDetailContent } from '@Components/ProductDetail/ProductDetailCon
 import { ProductDetailImg } from '@Components/ProductDetail/ProductDetailImg';
 import Button from '@Components/common/Button';
 import { Icon } from '@Components/common/Icon';
+import Layout from '@Components/common/Layout';
 import { Modal } from '@Components/common/Modal';
 import { NavBarBackBtn } from '@Components/common/NavBar/NavBarBackBtn';
 import { TabBarProductDetail } from '@Components/common/TabBar';
@@ -112,7 +113,7 @@ export const ProductDetail = () => {
   }, []);
 
   return (
-    <>
+    <Layout>
       {(isActiv || isActivSaleModal) && (
         <S.DimmedBox>
           <div className="dimmed" />
@@ -184,6 +185,6 @@ export const ProductDetail = () => {
           />
         )}
       </S.Layout>
-    </>
+    </Layout>
   );
 };

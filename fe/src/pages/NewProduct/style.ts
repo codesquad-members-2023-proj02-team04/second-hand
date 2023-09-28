@@ -1,20 +1,20 @@
 import styled from 'styled-components';
 
 export const Layout = styled.div`
-  width: 100vw;
+  width: inherit;
   .empty {
     height: 10vh;
   }
 
   & hr {
-    width: 95vw;
+    width: 95%;
     background: ${({ theme }) => theme.color.palette.gray500};
     height: 1px;
     border: 0;
   }
 
   & input {
-    width: 90vw;
+    width: 90%;
     height: 3vh;
     border: none;
   }
@@ -48,14 +48,14 @@ export const DetailBox = styled.div`
   justify-content: center;
 
   & textarea {
-    width: 90vw;
+    width: 90%;
     height: 55vh;
     border: none;
   }
 `;
 
 export const CategoryBox = styled.div`
-  width: 95vw;
+  width: 95%;
   display: flex;
   align-items: center;
   justify-content: space-between;

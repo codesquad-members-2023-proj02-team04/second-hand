@@ -1,4 +1,5 @@
 import LocationSelectField from '@Components/Registration/LocationSelectField';
+import Layout from '@Components/common/Layout';
 import { NavBarModal } from '@Components/common/NavBar/NavBarModal';
 import UserProfile from '@Components/common/UserProfile';
 import { useAuthContext } from '@Contexts/authContext';
@@ -54,7 +55,7 @@ const Registration = () => {
   }, [userLocationApiStatus]);
 
   return (
-    <>
+    <Layout>
       <NavBarModal
         prev="닫기"
         center="회원가입"
@@ -69,7 +70,7 @@ const Registration = () => {
           primaryLocation={primaryLocation}
         />
       </UserProfile>
-    </>
+    </Layout>
   );
 };
 

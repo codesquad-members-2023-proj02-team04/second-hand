@@ -8,7 +8,7 @@ export const Product = styled.div`
   gap: 20px;
   top: 8vh;
   height: 8vh;
-  width: 100vw;
+  width: inherit;
   border-bottom: 1px solid ${({ theme }) => theme.color.palette.gray500};
   padding: 10px 0px 10px 20px;
   background: ${({ theme }) => theme.color.palette.white};

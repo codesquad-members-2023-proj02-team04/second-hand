@@ -1,4 +1,5 @@
 import ChatBubble from '@Components/ChatRoom/ChatBubble';
+import Layout from '@Components/common/Layout';
 import { NavBarBackBtn } from '@Components/common/NavBar/NavBarBackBtn';
 import { TabBarChat } from '@Components/common/TabBar';
 import { useState } from 'react';
@@ -17,7 +18,7 @@ const ChatRoom = () => {
   };
 
   return (
-    <>
+    <Layout>
       <NavBarBackBtn
         prev="뒤로"
         handlePrev={handleBackBtnClick}
@@ -43,7 +44,7 @@ const ChatRoom = () => {
         setFormValue={setFormValue}
         handleChatSubmit={setMyChats}
       />
-    </>
+    </Layout>
   );
 };
 

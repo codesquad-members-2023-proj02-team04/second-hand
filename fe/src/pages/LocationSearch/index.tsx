@@ -1,4 +1,5 @@
 import { getAllLocations } from '@Apis/location';
+import Layout from '@Components/common/Layout';
 import LocationList from '@Components/common/LocationList';
 import { NavBarModalSearch } from '@Components/common/NavBar/NavBarModalSearch';
 import { useUserLocationContext } from '@Contexts/userLocationContext';
@@ -43,12 +44,12 @@ const LocationSearch = () => {
   };
 
   return (
-    <>
+    <Layout>
       <NavBarModalSearch prevHandler={goToPreviousPage} />
       {locations && (
         <LocationList locations={locations} handleItemClick={setLocation} />
       )}
-    </>
+    </Layout>
   );
 };
 

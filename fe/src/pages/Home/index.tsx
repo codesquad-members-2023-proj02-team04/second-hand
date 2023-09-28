@@ -1,5 +1,6 @@
 import Contents from '@Components/Home/Contents';
 import { NewProductButton } from '@Components/Home/NewProductButton';
+import Layout from '@Components/common/Layout';
 import { NavBarHome } from '@Components/common/NavBar/NavBarHome';
 import { Spinner } from '@Components/common/Spinner';
 import { TabBarHome } from '@Components/common/TabBar';
@@ -17,7 +18,7 @@ const Home = () => {
   }
 
   return (
-    <>
+    <Layout>
       <NavBarHome towns={userTownList} modalHanlder={reverseUserLocationList} />
       <ApiErrorBoundary>
         <Suspense fallback={<Spinner isDynamic={false} />}>
@@ -26,7 +27,7 @@ const Home = () => {
       </ApiErrorBoundary>
       <NewProductButton />
       <TabBarHome currentPage="home" />
-    </>
+    </Layout>
   );
 };
 

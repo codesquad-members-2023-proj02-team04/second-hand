@@ -6,7 +6,6 @@ export const Layout = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
 `;
 
 export const ImgBox = styled.img`
@@ -29,6 +28,7 @@ export const SubTitle = styled.div`
 
 export const LoginButtonBox = styled.div`
   display: flex;
+  width: 100%;
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: center;
@@ -40,9 +40,9 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
+  width: inherit;
   position: fixed;
-  width: 90vw;
   bottom: 0;
-  padding: 15px;
+  padding: 15px 0;
   ${({ theme }) => theme.font.fontType.caption2};
 `;

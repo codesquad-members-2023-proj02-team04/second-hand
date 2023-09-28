@@ -18,11 +18,12 @@ export const MainNoticeMessage = styled.div`
   ${({ theme }) => theme.font.fontType.headLine}
 `;
 
-export const SubNoticeMessage = styled.div`
-  width: 80vw;
+export const SubNoticeMessage = styled.p`
+  width: 80%;
   padding-top: 10px;
   text-align: center;
-  ${({ theme }) => theme.font.fontType.subHead}
+  ${({ theme }) => theme.font.fontType.subHead};
+  color: ${({ theme }) => theme.color.gray800};
 `;
 
 export const RedirectButton = styled.div`

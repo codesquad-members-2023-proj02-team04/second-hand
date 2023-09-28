@@ -3,10 +3,9 @@ import styled from 'styled-components';
 export const Layout = styled.div`
   align-items: center;
   justify-content: center;
-  padding: 0px 0.8em 1.5vh 0.8em;
+  padding-bottom: 1.5vh;
   border: 1px solid ${({ theme }) => theme.color.palette.gray200};
-  ${({ theme }) =>
-    theme.mixin.navBarMixin.commonNavBar({ height: '6.5vh', width: '92.5vw' })};
+  ${({ theme }) => theme.mixin.navBarMixin.commonNavBar({ height: '6.5vh' })};
 `;
 
 export const AddressBox = styled.button`
@@ -16,6 +15,7 @@ export const AddressBox = styled.button`
   background: ${({ theme }) => theme.color.colors.neutralBackgroundBlur};
   ${({ theme }) => theme.font.fontType.body};
   gap: 0.1em;
+  cursor: pointer;
 `;
 
 export const CategoryBox = styled.div`
@@ -23,7 +23,11 @@ export const CategoryBox = styled.div`
 `;
 
 export const DropDown = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
+  width: 50%;
   top: 8vh;
   border: 1px solid ${({ theme }) => theme.color.colors.neutralOverlay};
   border-radius: 12px;
@@ -33,21 +37,22 @@ export const DropDown = styled.div`
 
 export const Town = styled.button`
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 40px;
-  width: 45vw;
-  padding: 0.7vh 0 0.7vh 5vw;
+  width: 100%;
   border: none;
   border-bottom: 1px solid
     ${({ theme }) => theme.color.colors.neutralBackgroundBold};
   ${({ theme }) => theme.font.fontType.body};
   background: none;
+  cursor: pointer;
 `;
 
 export const TownSetting = styled.div`
   display: flex;
   align-items: center;
-  height: 30px;
-  padding: 0.7vh 0 0.7vh 5vw;
-  ${({ theme }) => theme.font.fontType.body}
+  height: 40px;
+  ${({ theme }) => theme.font.fontType.body};
+  cursor: pointer;
 `;

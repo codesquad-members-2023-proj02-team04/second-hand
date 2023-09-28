@@ -1,6 +1,7 @@
 import LocationButtonList from '@Components/LocationSetting/LocationButtonList';
 import LocationNotice from '@Components/LocationSetting/LocationNotice';
 import MessageAlert from '@Components/LocationSetting/MessageAlert';
+import Layout from '@Components/common/Layout';
 import { NavBarModal } from '@Components/common/NavBar/NavBarModal';
 import { useUserLocationContext } from '@Contexts/userLocationContext';
 import { LocalError } from '@Error/LocalError';
@@ -37,7 +38,7 @@ const LocationSetting = () => {
   }, [isShowNotice]);
 
   return (
-    <>
+    <Layout>
       <NavBarModal
         prev="닫기"
         center="동네 설정"
@@ -48,7 +49,7 @@ const LocationSetting = () => {
         <LocationButtonList handleIcon={updateUserLocation} />
         {isShowNotice && <MessageAlert />}
       </S.Layout>
-    </>
+    </Layout>
   );
 };
 

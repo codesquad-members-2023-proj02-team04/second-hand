@@ -5,7 +5,7 @@ export const navBarMixin = {
   commonNavBar: ({
     font = fontType.headLine,
     height = '8vh',
-    width = '100vw',
+    width = 'inherit',
     background = colors.neutralBackgroundBlur,
     alignItems = 'flex-end',
   }) => `

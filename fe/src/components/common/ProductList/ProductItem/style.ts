@@ -5,13 +5,12 @@ import { fontType } from '@Styles/font';
 export const Layout = styled.div`
   display: flex;
   gap: 10px;
-  width: 100vw;
+  width: 100%;
+  padding: 1.5vh 0;
   justify-content: center;
-  align-items: center;
-  padding-top: 2vh;
 `;
 export const ImgBox = styled.div`
-  width: 30vw;
+  width: 30%;
   height: 12vh;
   > img {
     width: 100%;
@@ -19,17 +18,17 @@ export const ImgBox = styled.div`
     border-radius: 10px;
   }
 `;
+export const ContentBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  gap: 5px;
+`;
 export const TitleBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60vw;
   ${fontType.subHead}
-`;
-export const ContentBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
 `;
 export const LocationBox = styled.div`
   color: ${({ theme }) => theme.color.palette.gray800};

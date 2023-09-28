@@ -13,7 +13,6 @@ export const ProductList = ({ list }: ProductListProps) => {
 
   return (
     <S.Layout>
-      <S.TopBox />
       {list &&
         list.map((item) => (
           <Fragment key={item.productId}>
@@ -41,7 +40,6 @@ export const ProductList = ({ list }: ProductListProps) => {
             <hr />
           </Fragment>
         ))}
-      <S.BottomBox />
     </S.Layout>
   );
 };

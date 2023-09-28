@@ -10,7 +10,8 @@ export const Box = styled.div`
   justify-content: space-around;
   position: fixed;
   bottom: 0;
-  width: 100vw;
+  padding: 0.5vh 0;
+  width: inherit;
   height: 8vh;
   background: ${({ theme }) => theme.color.palette.gray50};
 `;
@@ -19,6 +20,7 @@ export const Item = styled.div`
   display: flex;
   gap: 7px;
   flex-direction: column;
+  cursor: pointer;
 `;
 
 export const ItemName = styled.div<ItemNameProps>`

@@ -32,7 +32,7 @@ export const Button = styled.button<ButtonStyleProps>`
       }
       if (size === 'L') {
         return css`
-          width: 90vw;
+          width: 90%;
           border: none;
           border-radius: 8px;
           height: 6.5vh;
@@ -124,4 +124,5 @@ export const Button = styled.button<ButtonStyleProps>`
     ${buttonType === 'circle' && 'border: none'};
     padding: ${buttonType !== 'circle' && '8px 10px'};
   `};
+  cursor: pointer;
 `;

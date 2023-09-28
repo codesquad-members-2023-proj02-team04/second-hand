@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Layout = styled.div`
-  width: 46vw;
+  width: 19vw;
   height: 3.3vh;
   background: ${({ theme }) => theme.color.palette.gray400};
   border-radius: 8px;
@@ -12,7 +12,7 @@ export const Layout = styled.div`
 `;
 
 export const PickerBox = styled.div<{ isLeft: boolean }>`
-  width: 23vw;
+  width: 19vw;
   height: 2.9vh;
   border-radius: 8px;
   display: flex;

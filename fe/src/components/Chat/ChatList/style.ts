@@ -10,9 +10,13 @@ export const Item = styled.div`
   justify-content: space-around;
   flex-direction: row;
   height: 8vh;
-  width: 100vw;
   border-bottom: 1px solid ${({ theme }) => theme.color.palette.gray500};
   padding: 10px 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.color.palette.gray200};
+  }
 `;
 
 export const SpinnerBox = styled.div.attrs<SpinnerBoxProps>((props) => ({
