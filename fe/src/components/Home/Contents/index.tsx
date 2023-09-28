@@ -27,7 +27,7 @@ const Contents = () => {
       {isRefreshing && (
         <LoadingField isDynamic={true} ref={loadingIndicatorRef} />
       )}
-      {homeProductList && <ProductList list={homeProductList} />}
+      <ProductList list={homeProductList} />
     </>
   );
 };
