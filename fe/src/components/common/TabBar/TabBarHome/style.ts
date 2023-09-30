@@ -4,16 +4,20 @@ interface ItemNameProps {
   isSelected: boolean;
 }
 
-export const Box = styled.div`
+export const Box = styled.footer`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  position: fixed;
-  bottom: 0;
-  padding: 0.5vh 0;
-  width: inherit;
-  height: 8vh;
+  height: 60px;
   background: ${({ theme }) => theme.color.palette.gray50};
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    width: inherit;
+  }
 `;
 
 export const Item = styled.div`

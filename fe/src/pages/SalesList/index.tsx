@@ -6,6 +6,7 @@ import { TabBarHome } from '@Components/common/TabBar';
 import { useState } from 'react';
 import useFetch from '@Hooks/useFetch';
 import { ProductResponseData } from '@Types/index';
+import * as S from './style';
 
 const SalesList = () => {
   const [isActive, setIsActive] = useState<boolean>(true);
@@ -20,8 +21,9 @@ const SalesList = () => {
         isActiveSetValue={setIsActive}
         isActiveValue={isActive}
       />
-      <div className="empty" />
-      {SalesListData && <ProductList list={SalesListData.data.products} />}
+      <S.Contents>
+        {SalesListData && <ProductList list={SalesListData.data.products} />}
+      </S.Contents>
       <TabBarHome currentPage="sales" />
     </Layout>
   );

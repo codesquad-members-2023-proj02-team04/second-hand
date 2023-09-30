@@ -20,13 +20,13 @@ const usePullToRefresh = ({
   minimumLoadingTime = 1000,
 }: PullToRefreshProps) => {
   const [isRefreshing, setIsRefreshing] = useState(false);
-  const [distance, setDistance] = useState(0);
+  const [distance, setDistance] = useState(startDistance);
   const loadingIndicatorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const resetState = () => {
       setIsRefreshing(false);
-      setDistance(0);
+      setDistance(startDistance);
     };
 
     const onRefresh = () => {
@@ -37,12 +37,12 @@ const usePullToRefresh = ({
 
       setTimeout(() => {
         apiCallback();
-        setDistance(0);
+        setDistance(startDistance);
         setIsRefreshing(false);
 
         if (loadingIndicatorRef.current) {
           loadingIndicatorRef.current.style.transition = '';
-          loadingIndicatorRef.current.style.transform = `translateY(0px)`;
+          loadingIndicatorRef.current.style.transform = `translateY(${startDistance}px)`;
         }
       }, minimumLoadingTime);
     };
@@ -61,7 +61,7 @@ const usePullToRefresh = ({
       }
 
       if (loadingIndicatorRef.current) {
-        loadingIndicatorRef.current.style.opacity = `${spinnerY / 150}`;
+        loadingIndicatorRef.current.style.opacity = `${spinnerY / 100}`;
         loadingIndicatorRef.current.style.transform = `translateY(${spinnerY}px)`;
       }
 

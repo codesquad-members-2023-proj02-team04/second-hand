@@ -1,15 +1,25 @@
 import styled from 'styled-components';
 
 export const InfoBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 55vh;
+
+  @media (max-width: 768px) {
+    height: calc(100vh - 131px);
+  }
+
+  @media (min-width: 768px) {
+    height: 669px;
+  }
 `;
 
 export const ImgBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 70%;
 `;
 
 export const UserImg = styled.img`

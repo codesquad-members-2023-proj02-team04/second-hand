@@ -21,9 +21,11 @@ const Favorites = () => {
     <Layout>
       <NavBarDefault title="관심 목록" />
       <CategoryList handleCategory={getProductsBy} />
-      <S.TopBox />
-      {productListData && <ProductList list={productListData.data.products} />}
-      <S.BottomBox />
+      <S.Contents>
+        {productListData && (
+          <ProductList list={productListData.data.products} />
+        )}
+      </S.Contents>
       <TabBarHome currentPage="heart" />
     </Layout>
   );

@@ -31,14 +31,12 @@ const ChatRoom = () => {
           <S.Price>19,000원</S.Price>
         </S.ProductBody>
       </S.Product>
-      <S.TopBox />
       <S.ChatBox>
         {myChats.length > 0 &&
           myChats.map((chat, index) => (
             <ChatBubble key={index} type="my" title={chat} />
           ))}
       </S.ChatBox>
-      <S.BottomBox />
       <TabBarChat
         formValue={formValue}
         setFormValue={setFormValue}

@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 
 export const ButtonBox = styled.div`
-  position: fixed;
-  bottom: calc(100vh * 0.15);
+  position: absolute;
 
-  margin: -20px;
-
-  @media screen and (max-width: 768px) {
-    right: calc(100vw * 0.15);
+  @media (max-width: 768px) {
+    bottom: calc(100vh * 0.13);
+    right: calc(100vw * 0.12);
   }
 
-  @media screen and (min-width: 768px) {
-    right: calc(100vw * 0.35);
+  @media (min-width: 768px) {
+    bottom: 90px;
+    right: 40px;
   }
 `;

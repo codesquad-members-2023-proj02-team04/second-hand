@@ -13,11 +13,11 @@ interface ButtonProps {
 export const Layout = styled.div`
   display: flex;
   justify-content: center;
-  padding: 3vh 0 1.5vh 0;
+  padding: 3vh 0 10px 0;
   border-radius: 10px 10px 0px 0px;
   background: ${palette.white};
   ${({ theme }) =>
-    theme.mixin.navBarMixin.commonNavBar({ width: 'inherit', height: '5vh' })}
+    theme.mixin.navBarMixin.commonNavBar({ width: 'inherit', height: '60px' })}
   ${({ theme }) => theme.font.fontType.body}
 `;
 export const ModalText = styled.div`

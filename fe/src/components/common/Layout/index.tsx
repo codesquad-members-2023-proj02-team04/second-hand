@@ -7,7 +7,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => (
   <S.Layout>
-    <S.MobileView>{children}</S.MobileView>
+    <S.View>{children}</S.View>
   </S.Layout>
 );
 

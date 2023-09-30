@@ -5,7 +5,7 @@ export const Layout = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 `;
 
 export const ImgBox = styled.img`
@@ -41,8 +41,7 @@ export const Footer = styled.footer`
   justify-content: center;
   align-items: center;
   width: inherit;
-  position: fixed;
-  bottom: 0;
   padding: 15px 0;
+  bottom: calc((100vh - 800px) / 2 + 20px);
   ${({ theme }) => theme.font.fontType.caption2};
 `;

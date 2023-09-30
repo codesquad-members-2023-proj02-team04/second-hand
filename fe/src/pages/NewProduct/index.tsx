@@ -100,7 +100,6 @@ export const NewProduct = () => {
           }}
         />
         <S.ContentBox>
-          <div className="empty" />
           <S.SaveImgBox>
             <NewImg
               originFile={setProductImages}

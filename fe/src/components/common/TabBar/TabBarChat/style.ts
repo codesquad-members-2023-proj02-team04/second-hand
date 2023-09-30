@@ -1,14 +1,18 @@
 import styled from 'styled-components';
 
-export const Box = styled.div`
+export const Box = styled.footer`
   display: flex;
   justify-content: space-between;
-  padding: 0.5vh 0;
-  position: fixed;
-  bottom: 0;
-  width: inherit;
-  height: 8vh;
+  height: 60px;
   background: ${({ theme }) => theme.color.palette.gray50};
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    width: inherit;
+  }
 `;
 
 export const SendField = styled.div`

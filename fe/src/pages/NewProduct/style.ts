@@ -2,10 +2,6 @@ import styled from 'styled-components';
 
 export const Layout = styled.div`
   width: inherit;
-  .empty {
-    height: 10vh;
-  }
-
   & hr {
     width: 95%;
     background: ${({ theme }) => theme.color.palette.gray500};
@@ -47,9 +43,17 @@ export const DetailBox = styled.div`
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 768px) {
+    height: calc(100vh - 410px);
+  }
+
+  @media (min-width: 768px) {
+    height: 400px;
+  }
+
   & textarea {
     width: 90%;
-    height: 55vh;
+    height: 100%;
     border: none;
   }
 `;

@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Layout = styled.div`
   align-items: center;
   justify-content: center;
-  padding-bottom: 1.5vh;
+  padding-bottom: 10px;
   border: 1px solid ${({ theme }) => theme.color.palette.gray200};
-  ${({ theme }) => theme.mixin.navBarMixin.commonNavBar({ height: '6.5vh' })};
+  ${({ theme }) => theme.mixin.navBarMixin.commonNavBar({ height: '60px' })};
 `;
 
 export const AddressBox = styled.button`

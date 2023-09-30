@@ -4,6 +4,8 @@ interface SpinnerBoxProps {
   distanceY: number;
 }
 
+export const Layout = styled.ul``;
+
 export const Item = styled.div`
   display: flex;
   align-items: center;
@@ -64,14 +66,4 @@ export const ProductImg = styled.img`
   height: 48px;
   border: 1px solid ${({ theme }) => theme.color.palette.gray200};
   border-radius: 8px;
-`;
-
-export const TopBox = styled.div`
-  height: 8vh;
-  background: ${({ theme }) => theme.color.palette.white};
-`;
-
-export const BottomBox = styled.div`
-  height: 8vh;
-  background: ${({ theme }) => theme.color.palette.white};
 `;

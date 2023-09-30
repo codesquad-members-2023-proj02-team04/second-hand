@@ -27,10 +27,10 @@ const Login = () => {
             onClick={gitHubLoginHandler}
           />
         </S.LoginButtonBox>
+        <S.Footer>
+          Copyright ⓒ 2023 코드스쿼드 danggn4jo All rights reserved
+        </S.Footer>
       </S.Layout>
-      <S.Footer>
-        Copyright ⓒ 2023 코드스쿼드 danggn4jo All rights reserved
-      </S.Footer>
     </Layout>
   );
 };
