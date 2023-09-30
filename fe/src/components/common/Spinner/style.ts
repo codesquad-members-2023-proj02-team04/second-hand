@@ -27,6 +27,12 @@ export const Spinner = styled.div<SpinnerProps>`
         `
       : css`
           top: 50%;
-          right: calc(50vw - 196.5px);
+          @media (max-width: 768px) {
+            right: 45%;
+          }
+
+          @media (min-width: 768px) {
+            right: calc(50vw - 196.5px);
+          }
         `}
 `;
