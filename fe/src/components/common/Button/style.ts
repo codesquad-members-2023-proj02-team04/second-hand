@@ -15,7 +15,7 @@ export const Button = styled.button<ButtonStyleProps>`
           width: fit-content;
           border: 1px solid ${({ theme }) => theme.color.colors.neutralOverlay};
           border-radius: 8px;
-          height: 4vh;
+          height: 40px;
           padding: 8px 16px;
           ${theme.font.fontType.caption1};
         `;
@@ -25,17 +25,17 @@ export const Button = styled.button<ButtonStyleProps>`
           width: 177.5px;
           border: 1px solid ${({ theme }) => theme.color.colors.neutralOverlay};
           border-radius: 8px;
-          height: 5.5vh;
+          height: 55px;
           padding: 8px 16px;
           ${theme.font.fontType.callOut};
         `;
       }
       if (size === 'L') {
         return css`
-          width: 90vw;
+          width: 90%;
           border: none;
           border-radius: 8px;
-          height: 6.5vh;
+          height: 65px;
           padding: 8px 16px;
           ${theme.font.fontType.subHead};
         `;
@@ -124,4 +124,5 @@ export const Button = styled.button<ButtonStyleProps>`
     ${buttonType === 'circle' && 'border: none'};
     padding: ${buttonType !== 'circle' && '8px 10px'};
   `};
+  cursor: pointer;
 `;

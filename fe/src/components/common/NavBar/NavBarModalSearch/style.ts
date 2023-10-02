@@ -7,7 +7,6 @@ interface ButtonProps {
 }
 
 export const Layout = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,14 +17,14 @@ export const Layout = styled.div`
 export const searchBox = styled.div`
   display: flex;
   align-items: center;
-  width: 90vw;
+  width: 90%;
   border-radius: 10px;
   background: ${({ theme }) => theme.color.palette.gray400};
   margin-bottom: 10px;
   padding-left: 2vw;
   & input {
     background: none;
-    width: 80vw;
+    width: 80%;
     height: 4vh;
     outline: none;
     border: none;
@@ -38,11 +37,11 @@ export const Box = styled.div`
   padding: 3vh 0 0;
   border-radius: 10px 10px 0px 0px;
   background: ${palette.white};
-  width: 100vw;
+  width: 100%;
 `;
 
 export const ModalText = styled.div`
-  width: 90vw;
+  width: 90%;
   padding-left: 12px;
   padding-bottom: 5px;
   display: flex;
@@ -60,4 +59,5 @@ export const Button = styled.button<ButtonProps>`
     isActive
       ? theme.color.colors.neutralTextStrong
       : theme.color.colors.neutralTextWeak};
+  cursor: pointer;
 `;

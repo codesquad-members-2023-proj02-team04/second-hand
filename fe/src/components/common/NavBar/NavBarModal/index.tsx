@@ -20,14 +20,16 @@ export const NavBarModal = ({
   isActiveNext = true,
 }: ModalProps) => (
   <S.Layout>
-    <S.ModalText>
-      <S.ButtonBox onClick={handlePrev} disabled={isActivePrev}>
+    {prev && (
+      <S.PrevButton onClick={handlePrev} disabled={isActivePrev}>
         {prev}
-      </S.ButtonBox>
-      <div>{center}</div>
-      <S.ButtonBox onClick={handleNext} disabled={isActiveNext}>
+      </S.PrevButton>
+    )}
+    <S.ModalText>{center}</S.ModalText>
+    {next && (
+      <S.NextButton onClick={handleNext} disabled={isActiveNext}>
         {next}
-      </S.ButtonBox>
-    </S.ModalText>
+      </S.NextButton>
+    )}
   </S.Layout>
 );

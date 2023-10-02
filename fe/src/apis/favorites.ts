@@ -28,7 +28,7 @@ export const updateProductFavorite = async (
   productId: number,
   method: string,
 ) =>
-  await fetch(`${END_POINT.watchlist}/${productId}/watchlist`, {
+  await fetch(`${END_POINT.products}/${productId}/watchlist`, {
     method,
     headers: {
       Authorization: 'Bearer ' + persistentStorage.get(),

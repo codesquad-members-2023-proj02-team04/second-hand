@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Layout = styled.div`
   display: flex;
   flex-direction: column;
-  z-index: 1;
+  width: inherit;
+  height: 100%;
   .user-info_box {
     display: flex;
     justify-content: center;
@@ -36,7 +37,7 @@ export const UserInfoBox = styled.div`
 export const DimmedBox = styled.div`
   position: absolute;
   background: ${({ theme }) => theme.color.colors.neutralOverlay};
-  width: 100vw;
+  width: inherit;
   height: 100vh;
   z-index: 2;
 `;

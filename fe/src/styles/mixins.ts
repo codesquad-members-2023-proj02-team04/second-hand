@@ -4,18 +4,17 @@ import { fontType } from './font';
 export const navBarMixin = {
   commonNavBar: ({
     font = fontType.headLine,
-    height = '8vh',
-    width = '100vw',
+    height = '55px',
+    width = 'inherit',
     background = colors.neutralBackgroundBlur,
     alignItems = 'flex-end',
   }) => `
-  position: fixed;
   width: ${width};
+  position: relative;
   backdrop-filter: blur(4px);
   display: flex;
   align-items: ${alignItems};
   backdrop-filter: blur(4px);
-  z-index: 1;
   border-bottom: 1px solid  ${colors.neutralBorder};
   height :${height};
   background: ${background};

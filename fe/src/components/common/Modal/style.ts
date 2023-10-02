@@ -5,14 +5,14 @@ export const Layout = styled.div`
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 100vw;
+  width: inherit;
   align-items: center;
   position: absolute;
   bottom: 2vh;
 `;
 
 export const ModifyBox = styled.div`
-  width: 90vw;
+  width: 90%;
   border: 1px solid ${({ theme }) => theme.color.colors.neutralBorderStrong};
   border-radius: 11px;
   display: flex;
@@ -22,14 +22,14 @@ export const ModifyBox = styled.div`
   color: ${({ theme }) => theme.color.palette.blue};
   background: ${({ theme }) => theme.color.colors.neutralBackgroundWeak};
   & div:first-child {
-    width: 90vw;
+    width: 90%;
     height: 7vh;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   & div:not(:first-child) {
-    width: 90vw;
+    width: 90%;
     height: 7vh;
     display: flex;
     justify-content: center;

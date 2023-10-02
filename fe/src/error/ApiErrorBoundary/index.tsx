@@ -1,4 +1,5 @@
 import NotFound from '@Components/common/NotFound';
+import Redirect from '@Components/common/Redirect';
 import { ApiError } from '@Error/ApiError';
 import React, { ReactNode } from 'react';
 import { ERROR_MESSAGE } from '@Constants/index';
@@ -47,7 +48,7 @@ export class ApiErrorBoundary extends React.Component<Props, State> {
       return this.props.children;
     }
     if (this.state.error?.message === SERVER_MESSAGE.USER_TOKEN_EXPIRED) {
-      return <NotFound errorMessage={this.state.error?.message} />;
+      return <Redirect errorMessage={this.state.error?.message} />;
     }
 
     return <NotFound errorMessage={ERROR_MESSAGE.default} />;

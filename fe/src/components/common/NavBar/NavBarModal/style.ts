@@ -13,20 +13,22 @@ interface ButtonProps {
 export const Layout = styled.div`
   display: flex;
   justify-content: center;
-  padding: 3vh 0 0;
+  padding: 3vh 0 10px 0;
   border-radius: 10px 10px 0px 0px;
   background: ${palette.white};
-  width: 100vw;
-  ${({ theme }) => theme.mixin.navBarMixin.commonNavBar({ height: '5vh' })}
+  ${({ theme }) =>
+    theme.mixin.navBarMixin.commonNavBar({ width: 'inherit', height: '60px' })}
   ${({ theme }) => theme.font.fontType.body}
 `;
 export const ModalText = styled.div`
-  width: 90vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 `;
 
-export const ButtonBox = styled.button<ButtonProps>`
+export const PrevButton = styled.button<ButtonProps>`
+  position: absolute;
+  left: 0;
+  margin-left: 1vw;
   border: none;
   background: none;
   color: ${({ theme }) => theme.color.colors.neutralTextStrong};
@@ -34,4 +36,19 @@ export const ButtonBox = styled.button<ButtonProps>`
   :disabled {
     color: ${({ theme }) => theme.color.colors.neutralTextWeak};
   }
+  cursor: pointer;
+`;
+
+export const NextButton = styled.button<ButtonProps>`
+  position: absolute;
+  right: 0;
+  margin-right: 1vw;
+  border: none;
+  background: none;
+  color: ${({ theme }) => theme.color.colors.neutralTextStrong};
+
+  :disabled {
+    color: ${({ theme }) => theme.color.colors.neutralTextWeak};
+  }
+  cursor: pointer;
 `;

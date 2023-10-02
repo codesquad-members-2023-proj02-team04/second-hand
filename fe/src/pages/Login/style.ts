@@ -5,13 +5,12 @@ export const Layout = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
 `;
 
 export const ImgBox = styled.img`
   padding: 10px;
-  height: 10vh;
+  height: 70px;
 `;
 
 export const Title = styled.div`
@@ -19,6 +18,11 @@ export const Title = styled.div`
   font-size: 1.063rem;
   line-height: 1.5rem;
   font-weight: 800;
+  margin-top: 1.5rem;
+
+  strong {
+    color: ${({ theme }) => theme.color.colors.accentBackgroundPrimary};
+  }
 `;
 
 export const SubTitle = styled.div`
@@ -29,20 +33,20 @@ export const SubTitle = styled.div`
 
 export const LoginButtonBox = styled.div`
   display: flex;
+  width: 100%;
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  padding-top: 20vh;
+  padding-top: 180px;
 `;
 
 export const Footer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  width: 90vw;
+  width: inherit;
+  padding: 15px 0;
   bottom: 0;
-  padding: 15px;
   ${({ theme }) => theme.font.fontType.caption2};
 `;

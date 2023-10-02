@@ -19,9 +19,20 @@ export const Spinner = styled.div<SpinnerProps>`
   border-radius: 50%;
   animation: ${spinAnimation} 1s linear infinite;
   ${({ isDynamic }) =>
-    isDynamic &&
-    css`
-      top: 15%;
-      left: 15%;
-    `}
+    isDynamic
+      ? css`
+          top: 45%;
+          left: 45%;
+        `
+      : css`
+          position: absolute;
+          top: 50%;
+          @media (max-width: 768px) {
+            right: 45%;
+          }
+
+          @media (min-width: 768px) {
+            right: calc(50vw - 196.5px);
+          }
+        `}
 `;

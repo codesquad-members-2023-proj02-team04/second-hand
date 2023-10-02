@@ -25,8 +25,7 @@ const ChatList = () => {
   };
 
   return (
-    <>
-      <S.TopBox />
+    <S.Layout>
       {Products &&
         Products.map(
           ({
@@ -61,7 +60,7 @@ const ChatList = () => {
             </S.Item>
           ),
         )}
-    </>
+    </S.Layout>
   );
 };
 

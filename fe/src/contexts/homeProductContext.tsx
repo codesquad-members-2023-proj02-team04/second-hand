@@ -5,7 +5,7 @@ import { IGetHomeProducts } from '@Types/homeProducts';
 import { Product, ProductResponseData } from '@Types/index';
 
 interface HomeProductsContextProps {
-  homeProductList: Product[] | undefined;
+  homeProductList: Product[];
   getHomeProducts: ({ page, size, locationId }: IGetHomeProducts) => void;
 }
 

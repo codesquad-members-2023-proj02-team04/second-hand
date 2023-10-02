@@ -1,4 +1,5 @@
 import { getSales } from '@Apis/sales';
+import Layout from '@Components/common/Layout';
 import { NavBarSegmentPicker } from '@Components/common/NavBar/NavBarSegmentPicker';
 import { ProductList } from '@Components/common/ProductList';
 import { TabBarHome } from '@Components/common/TabBar';
@@ -14,16 +15,17 @@ const SalesList = () => {
   });
 
   return (
-    <S.Layout>
+    <Layout>
       <NavBarSegmentPicker
         title="판매내역"
         isActiveSetValue={setIsActive}
         isActiveValue={isActive}
       />
-      <div className="empty" />
-      {SalesListData && <ProductList list={SalesListData.data.products} />}
+      <S.Contents>
+        {SalesListData && <ProductList list={SalesListData.data.products} />}
+      </S.Contents>
       <TabBarHome currentPage="sales" />
-    </S.Layout>
+    </Layout>
   );
 };
 

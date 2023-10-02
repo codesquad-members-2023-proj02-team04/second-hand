@@ -12,9 +12,14 @@ interface fetchProps {
 
 interface useFetchProps extends fetchProps {
   suspense?: boolean;
+  mockTest?: boolean;
 }
 
-const useFetch = <R,>({ fetchFn, suspense = false }: useFetchProps) => {
+const useFetch = <R,>({
+  fetchFn,
+  suspense = false,
+  mockTest = false,
+}: useFetchProps) => {
   const [promise, setPromise] = useState<Promise<void>>();
   const [data, setData] = useState<R>();
   const [status, setStatus] = useState<apiStutus>(API_STATUS.IDLE);
@@ -26,6 +31,10 @@ const useFetch = <R,>({ fetchFn, suspense = false }: useFetchProps) => {
       setStatus(API_STATUS.LOADING);
 
       const resolvePromise = async (res: Response) => {
+        if (mockTest) {
+          setStatus(API_STATUS.SUCCESS);
+          return;
+        }
         const data = await res.json();
 
         if (data.message === SERVER_MESSAGE.USER_TOKEN_EXPIRED) {

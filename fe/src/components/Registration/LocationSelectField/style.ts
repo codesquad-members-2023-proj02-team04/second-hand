@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { theme } from '@Styles/theme';
 
 export const AddLocationButtonBox = styled.div`
   display: flex;
   justify-content: center;
-  width: 100vw;
+  width: inherit;
 `;
 
 export const LocationBox = styled.div`
@@ -11,4 +12,5 @@ export const LocationBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  ${theme.font.fontType.subHead};
 `;

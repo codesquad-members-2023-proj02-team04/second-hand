@@ -65,9 +65,6 @@ export const NavBarHome = ({ towns, modalHanlder }: NavBarHomeProps) => {
           </S.TownSetting>
         </S.DropDown>
       )}
-      <S.CategoryBox>
-        <Icon iconType="line" />
-      </S.CategoryBox>
     </S.Layout>
   );
 };

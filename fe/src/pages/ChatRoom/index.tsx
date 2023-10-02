@@ -1,4 +1,5 @@
 import ChatBubble from '@Components/ChatRoom/ChatBubble';
+import Layout from '@Components/common/Layout';
 import { NavBarBackBtn } from '@Components/common/NavBar/NavBarBackBtn';
 import { TabBarChat } from '@Components/common/TabBar';
 import { useState } from 'react';
@@ -17,7 +18,7 @@ const ChatRoom = () => {
   };
 
   return (
-    <>
+    <Layout>
       <NavBarBackBtn
         prev="뒤로"
         handlePrev={handleBackBtnClick}
@@ -30,20 +31,18 @@ const ChatRoom = () => {
           <S.Price>19,000원</S.Price>
         </S.ProductBody>
       </S.Product>
-      <S.TopBox />
       <S.ChatBox>
         {myChats.length > 0 &&
           myChats.map((chat, index) => (
             <ChatBubble key={index} type="my" title={chat} />
           ))}
       </S.ChatBox>
-      <S.BottomBox />
       <TabBarChat
         formValue={formValue}
         setFormValue={setFormValue}
         handleChatSubmit={setMyChats}
       />
-    </>
+    </Layout>
   );
 };
 

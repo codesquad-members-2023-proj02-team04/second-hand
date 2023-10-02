@@ -1,6 +1,7 @@
 import { postNewProduct } from '@Apis/product';
 import { NewImg } from '@Components/NewProduct/NewImg';
 import { NewTitle } from '@Components/NewProduct/NewTitle';
+import Layout from '@Components/common/Layout';
 import { NavBarModal } from '@Components/common/NavBar/NavBarModal';
 import { TabBarSellProduct } from '@Components/common/TabBar';
 import { useUserLocationContext } from '@Contexts/userLocationContext';
@@ -86,54 +87,55 @@ export const NewProduct = () => {
   });
 
   return (
-    <S.Layout>
-      <NavBarModal
-        prev="닫기"
-        center="내 물건 팔기"
-        next="완료"
-        handlePrev={() => navigation(-1)}
-        handleNext={async () => {
-          await handlePost();
-          navigation('/home');
-        }}
-      />
-      <S.ContentBox>
-        <div className="empty" />
-        <S.SaveImgBox>
-          <NewImg
-            originFile={setProductImages}
-            originFileValue={productImages}
-          />
-        </S.SaveImgBox>
-        <hr />
-        <NewTitle titleProps={setTitle} titleValueProps={title} />
-        <hr />
-        <S.PriceBox>
-          <label htmlFor="priceBox">￦</label>
-          <input
-            type="number"
-            placeholder="가격(선택 사항)"
-            id="priceBox"
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              setPrice(e.target.value);
-              handelSavePrice(e);
-            }}
-            value={price}
-          />
-        </S.PriceBox>
-        <hr />
-        <S.DetailBox>
-          <textarea
-            placeholder="역삼 1동에 올릴 게시물 내용을 작성해주세요.(판매금지 물품은 게시가 제한될 수 있어요.)"
-            value={contentes}
-            onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
-              setContents(e.target.value);
-              handelDetailText(e);
-            }}
-          />
-        </S.DetailBox>
-      </S.ContentBox>
-      <TabBarSellProduct currentLocation="역삼1동" />
-    </S.Layout>
+    <Layout>
+      <S.Layout>
+        <NavBarModal
+          prev="닫기"
+          center="내 물건 팔기"
+          next="완료"
+          handlePrev={() => navigation(-1)}
+          handleNext={async () => {
+            await handlePost();
+            navigation('/home');
+          }}
+        />
+        <S.ContentBox>
+          <S.SaveImgBox>
+            <NewImg
+              originFile={setProductImages}
+              originFileValue={productImages}
+            />
+          </S.SaveImgBox>
+          <hr />
+          <NewTitle titleProps={setTitle} titleValueProps={title} />
+          <hr />
+          <S.PriceBox>
+            <label htmlFor="priceBox">￦</label>
+            <input
+              type="number"
+              placeholder="가격(선택 사항)"
+              id="priceBox"
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                setPrice(e.target.value);
+                handelSavePrice(e);
+              }}
+              value={price}
+            />
+          </S.PriceBox>
+          <hr />
+          <S.DetailBox>
+            <textarea
+              placeholder="역삼 1동에 올릴 게시물 내용을 작성해주세요.(판매금지 물품은 게시가 제한될 수 있어요.)"
+              value={contentes}
+              onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => {
+                setContents(e.target.value);
+                handelDetailText(e);
+              }}
+            />
+          </S.DetailBox>
+        </S.ContentBox>
+        <TabBarSellProduct currentLocation="역삼1동" />
+      </S.Layout>
+    </Layout>
   );
 };

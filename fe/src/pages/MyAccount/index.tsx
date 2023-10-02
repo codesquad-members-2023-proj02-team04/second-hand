@@ -1,4 +1,5 @@
 import Logout from '@Components/MyAccount/Logout';
+import Layout from '@Components/common/Layout';
 import { NavBarDefault } from '@Components/common/NavBar/NabBarDefault';
 import { TabBarHome } from '@Components/common/TabBar';
 import UserProfile from '@Components/common/UserProfile';
@@ -14,13 +15,13 @@ const MyAccount = () => {
   }
 
   return (
-    <>
+    <Layout>
       <NavBarDefault title="내 계정" />
       <UserProfile avatar={userInfo.avatar} username={userInfo.username}>
         <Logout />
       </UserProfile>
       <TabBarHome currentPage="account" />
-    </>
+    </Layout>
   );
 };
 

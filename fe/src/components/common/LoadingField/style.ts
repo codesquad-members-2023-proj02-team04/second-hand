@@ -4,7 +4,9 @@ export const LoadingField = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  z-index: 0;
+  top: 0;
   left: 45%;
   width: 50px;
   height: 50px;
