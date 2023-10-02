@@ -21,6 +21,7 @@ const PageGuide = () => {
   const logoutHandler = () => {
     persistentStorage.delete();
     navigate(ROUTE_PATH.ROOT);
+    window.location.reload();
   };
 
   return (
