@@ -14,6 +14,34 @@ export const Board = styled.div`
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 `;
 
+export const SuccesBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.color.palette.gray900};
+
+  strong {
+    font-size: 21px;
+    font-weight: 700;
+    color: ${({ theme }) => theme.color.colors.accentBackgroundPrimary};
+  }
+`;
+
+export const LoadingBox = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const Header = styled.div`
   display: flex;
   justify-content: space-between;
@@ -82,6 +110,20 @@ export const Content = styled.div`
 
     &:focus {
       outline: none;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      height: 5%;
+      background: ${({ theme }) => theme.color.colors.accentBackgroundPrimary};
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 149, 0, 0.1);
     }
   }
 `;
