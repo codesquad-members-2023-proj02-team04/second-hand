@@ -18,14 +18,14 @@ export const Spinner = styled.div<SpinnerProps>`
   border-top-color: transparent;
   border-radius: 50%;
   animation: ${spinAnimation} 1s linear infinite;
-  position: absolute;
   ${({ isDynamic }) =>
     isDynamic
       ? css`
-          top: 15%;
-          left: 15%;
+          top: 45%;
+          left: 45%;
         `
       : css`
+          position: absolute;
           top: 50%;
           @media (max-width: 768px) {
             right: 45%;
