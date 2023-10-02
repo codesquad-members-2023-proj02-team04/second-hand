@@ -11,17 +11,16 @@ export const Layout = styled.div`
 `;
 export const ImgBox = styled.div`
   width: 30%;
-  height: 12vh;
   > img {
     width: 100%;
-    height: 100%;
+    height: 94%;
     border-radius: 10px;
   }
 `;
 export const ContentBox = styled.div`
   display: flex;
   flex-direction: column;
-  width: 65%;
+  width: 62%;
   gap: 5px;
 `;
 export const TitleBox = styled.div`
