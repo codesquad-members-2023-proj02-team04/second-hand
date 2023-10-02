@@ -6,6 +6,8 @@ export const Contents = styled.div`
   }
 
   @media (max-width: 769px) {
-    height: calc(100vh - (10vh + 60px));
+    ul {
+      height: calc(100vh - (160.4px));
+    }
   }
 `;

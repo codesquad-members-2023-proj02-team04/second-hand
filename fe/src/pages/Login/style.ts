@@ -10,7 +10,7 @@ export const Layout = styled.div`
 
 export const ImgBox = styled.img`
   padding: 10px;
-  height: 10vh;
+  height: 70px;
 `;
 
 export const Title = styled.div`
@@ -18,6 +18,11 @@ export const Title = styled.div`
   font-size: 1.063rem;
   line-height: 1.5rem;
   font-weight: 800;
+  margin-top: 1.5rem;
+
+  strong {
+    color: ${({ theme }) => theme.color.colors.accentBackgroundPrimary};
+  }
 `;
 
 export const SubTitle = styled.div`
@@ -33,7 +38,7 @@ export const LoginButtonBox = styled.div`
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  padding-top: 20vh;
+  padding-top: 180px;
 `;
 
 export const Footer = styled.footer`
@@ -42,6 +47,6 @@ export const Footer = styled.footer`
   align-items: center;
   width: inherit;
   padding: 15px 0;
-  bottom: calc((100vh - 800px) / 2 + 20px);
+  bottom: 0;
   ${({ theme }) => theme.font.fontType.caption2};
 `;

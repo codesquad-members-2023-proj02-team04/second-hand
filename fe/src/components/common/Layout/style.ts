@@ -11,7 +11,33 @@ export const Layout = styled.div`
   }
 `;
 
-export const View = styled.div`
+export const BackgroundImg = styled.img`
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  position: absolute;
+  z-index: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+`;
+
+export const DesktopView = styled.div`
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    right: 60vw;
+    height: 800px;
+  }
+`;
+
+export const MobileView = styled.div`
   @media (max-width: 768px) {
     width: 100vw - 2px;
     height: 100vh;
@@ -42,9 +68,11 @@ export const View = styled.div`
 
   @media (min-width: 768px) {
     position: fixed;
-    right: calc(50vw - 360px);
+    right: calc(45vw - 360px);
     width: 360px;
     height: 800px;
+    background-color: ${({ theme }) => theme.color.colors.neutralBackground};
+    border: 1px solid ${({ theme }) => theme.color.colors.neutralBorder};
 
     ul {
       height: 668px;
@@ -64,7 +92,8 @@ export const View = styled.div`
     }
 
     footer {
-      position: absolute;
+      position: fixed;
+      bottom: calc((100vh - 800px) / 2);
     }
   }
 `;
