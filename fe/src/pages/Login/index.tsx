@@ -14,7 +14,9 @@ const Login = () => {
     <Layout>
       <S.Layout>
         <S.ImgBox src="https://user-images.githubusercontent.com/81420856/247801442-217f470b-5a61-4fea-9dd6-66d29a8702d9.png" />
-        <S.Title>당신 근처의 당근마켓</S.Title>
+        <S.Title>
+          당신 근처의 <strong>Second Hand</strong>
+        </S.Title>
         <S.SubTitle>중고 거래부터 동네 정보까지,</S.SubTitle>
         <S.SubTitle>지금 내 동네를 선택하고 시작해보세요!</S.SubTitle>
         <S.LoginButtonBox>
