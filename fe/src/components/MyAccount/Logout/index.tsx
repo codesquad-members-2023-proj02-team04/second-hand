@@ -2,12 +2,13 @@ import Button from '@Components/common/Button';
 import { useNavigate } from 'react-router-dom';
 import { ROUTE_PATH } from '@Constants/route';
 import * as S from './style';
+import { persistentStorage } from '../../../App';
 
 const Logout = () => {
   const navigate = useNavigate();
 
   const logoutHandler = () => {
-    localStorage.removeItem('JWTToken');
+    persistentStorage.delete();
     navigate(ROUTE_PATH.ROOT);
   };
 
