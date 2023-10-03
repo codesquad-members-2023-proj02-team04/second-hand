@@ -4,9 +4,16 @@
 - 리팩토링 기간: 23.09.14 - 현재
 - 추가구현 기간: 23.10.02 - 현재
 
+👉👉 [FE 파트 노션 방문하기](https://www.notion.so/FE-8d4e6865ed5041c29ec9a843353f4d7c?pvs=4)  
+👉👉 [FE 파트 피그마 방문하기](https://www.figma.com/file/OW2wOPQ5Ts3iREgJvLT66R/second-hand?type=whiteboard&node-id=0%3A1&t=H2gtXrHRpu0zgoLj-1)
+
 ## 📌 서버 통신 아키텍쳐
 
 <img width="928" alt="스크린샷 2023-10-03 오후 2 21 20" src="https://user-images.githubusercontent.com/81420856/272154263-624a5024-7b2c-4b12-a946-bb64d6720843.png">
+
+## 📌 상태 관리 아키텍쳐
+
+<img width="700" alt="스크린샷 2023-10-03 오후 4 20 28" src="https://user-images.githubusercontent.com/81420856/272177249-2c412a8c-52d1-44bd-b901-69488a6a8f1e.png">
 
 ## 📌 주요 컴포넌트 데모, 로직 흐름도 및 구조
 
