@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+# 🥕 Second Hand Market - FE 파트 소개
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 프로젝트 기간: 23.06.05 - 23.06.30
+- 리팩토링 기간: 23.09.14 - 현재
+- 추가구현 기간: 23.10.02 - 현재
 
-## Available Scripts
+## 📌 서버 통신 아키텍쳐
 
-In the project directory, you can run:
+<img width="928" alt="스크린샷 2023-10-03 오후 2 21 20" src="https://user-images.githubusercontent.com/81420856/272154263-624a5024-7b2c-4b12-a946-bb64d6720843.png">
 
-### `npm start`
+## 📌 주요 컴포넌트 데모, 로직 흐름도 및 구조
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 🥕 데스크탑 뷰
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![프로젝트 소개 컴포넌트 동작 시연](https://user-images.githubusercontent.com/81420856/272159802-e12880d0-7fee-446b-ae44-d1a4cdee4985.gif)
 
-### `npm test`
+### 🥕 온보딩 + 로그인 + 회원가입 Flow
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img width="992" alt="스크린샷 2023-10-03 오후 2 36 53" src="https://user-images.githubusercontent.com/81420856/272159099-eefd792a-5585-4fba-a22f-51cb5d12f4cd.png">
 
-### `npm run build`
+### 🥕 홈 페이지
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img width="870" alt="스크린샷 2023-10-03 오후 2 38 23" src="https://user-images.githubusercontent.com/81420856/272159433-4cef54e0-d2f5-4e73-90b8-65d59fff43c8.png">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🥕 판매목록 페이지
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="852" alt="스크린샷 2023-10-03 오후 2 51 24" src="https://user-images.githubusercontent.com/81420856/272159476-997c4b66-fcde-426f-a67e-4ffdca98f5f8.png">
 
-### `npm run eject`
+### 🥕 채팅 페이지
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img width="850" alt="스크린샷 2023-10-03 오후 2 51 49" src="https://user-images.githubusercontent.com/81420856/272159488-21e1ce2e-a39c-424c-8bec-93330768fae7.png">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🥕 내 계정 페이지
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<img width="848" alt="스크린샷 2023-10-03 오후 2 51 37" src="https://user-images.githubusercontent.com/81420856/272159484-a9246e1a-cfce-49a1-ad2c-a5aaf3a7fa74.png">
